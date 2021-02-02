@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sally's Lamp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Lamp</h1>
+  <p>Hi Sally, I hope you are enjoying your lamp</p>
+</div>
+
+<div class="container">
+  <a href="{{ url_for('on') }}"><button class="btn btn-success btn-block btn-lg" role="button">ON</button></a>
+</div>
+<div class="container">
+  <a href="{{ url_for('off') }}"><button class="btn btn-danger btn-block btn-lg" role="button">OFF</button></a>
+</div>
+<div class="container">
+  <a href="{{ url_for('rise') }}"><button class="btn btn-primary btn-block btn-lg" role="button">SUNRISE</button></a>
+</div>
+
+
+</body>
+</html>
