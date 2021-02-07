@@ -6,19 +6,6 @@ import light
 
 app = Flask(__name__)
 
-# def sunrise():
-#     header = f"\nSunrise @ {asctime()}:\n"
-# 
-#     with open("/home/pi/sunrise-lamp/output.txt", "a+") as log:
-#         log.write(header)
-#         
-#         with open("/home/pi/sunrise-lamp/error.txt", "a+") as err:
-#             err.write(header)
-#             
-#             subprocess.Popen(["python3", "sunrise.py"], stdout=log, stderr=err)
-
-
-
 @app.route("/")
 def home():
     # sunrise()
@@ -40,6 +27,9 @@ def off():
 def rise():
     light.rise()
     return redirect(url_for('home'))
+
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
