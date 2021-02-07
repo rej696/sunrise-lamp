@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>{% block title %}Control{% endblock %}</h1>
+    <p>Hi Sally, I hope you are enjoying your lamp</p>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <a href="{{ url_for('lamp.on') }}"><button class="btn btn-success btn-block btn-lg" role="button">ON</button></a>
+    </div>
+    <div class="container">
+        <a href="{{ url_for('lamp.off') }}"><button class="btn btn-danger btn-block btn-lg" role="button">OFF</button></a>
+    </div>
+    <div class="container">
+        <a href="{{ url_for('lamp.rise') }}"><button class="btn btn-primary btn-block btn-lg" role="button">SUNRISE</button></a>
+    </div>
+{% endblock %}
